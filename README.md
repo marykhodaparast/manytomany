@@ -1,0 +1,1 @@
+This is manytomany relationship in laravel mini-project in udemy by Edwin Diaz
