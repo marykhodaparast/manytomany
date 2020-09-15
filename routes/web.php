@@ -49,3 +49,16 @@ Route::get('/delete', function () {
         $role->whereId(2)->delete();//but it doesn't delete the items in role_user table
     }
 });
+Route::get('/attach',function(){
+     $user = User::findOrFail(1);
+     $user->roles()->attach(3);//3 is the id of role that we want to attach to that user
+
+});
+Route::get('/detach',function(){
+    $user = User::findOrFail(1);
+    $user->roles()->detach();//if you don't pass any parameters to function detach all of the roles are gone
+});
+Route::get('/sync',function(){
+    $user = User::findOrFail(1);
+    $user->roles()->sync([3,4]);//it empties the role_user table and gives the user the roles that are in the array sync
+});
