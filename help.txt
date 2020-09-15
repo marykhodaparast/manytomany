@@ -1,0 +1,2 @@
+15-100:
+hasMany is used in a One To Many relationship while belongsToMany refers to a Many To Many
